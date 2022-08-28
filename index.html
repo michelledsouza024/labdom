@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="01">
+
+    <h1 id="03">AKATSUKI</h1>
+
+    <p>Akatsuki (暁, literally meaning: "Dawn" or "Daybreak") was a group of shinobi that existed outside the usual
+        system of hidden villages. Over the course of several decades, Akatsuki took different forms and was led by
+        different individuals. Though each iteration is viewed as either subversives or criminals, all seek to make
+        the
+        world a better place through their own means. Each Akatsuki tended to have multiple lairs across the world,
+        inaccessible either due to their remoteness or the various security measures that protected them.
+    </p><br>
+
+    <div class="row">
+        <div class="column">
+            <img src="aka2.png" alt="akatsuki" style="width:650px" id="07">
+        </div>
+
+        <div class="column">
+
+            <button type="button" onclick="myFunction01()">Set padding</button><br><br>
+            <button type="button" onclick="myFunction02()">Set background color to akatsuki's robe</button><br><br>
+            <button type="button" onclick="myFunction03()">Set title color to akatsuki's robe</button><br><br>
+            <button type="button" onclick="myFunction04()">Set background image to akatsuki's robe</button><br><br>
+            <button type="button" onclick="myFunction05()">Insert other member names</button><br><br>
+            <button type="button" onclick="myFunction06()">Only show members with visual powers</button><br><br>
+            <button type="button" onclick="myFunction07()">Tilt the image</button><br><br>
+
+            <h2>LEADER: MADARA UCHIHA</h2>
+            <p id="056">ZETSU</p>
+
+        </div>
+    </div>
+
+    <script>
+        function myFunction01() {
+            document.getElementById("01").style.padding = "20px 50px";
+        }
+
+        function myFunction02() {
+            document.body.style.backgroundColor = "black";
+        }
+
+        function myFunction03() {
+            document.getElementById("03").style.color = "#ff0000";
+        }
+
+        function myFunction04() {
+            document.body.style.backgroundImage = "url('aka.png')";
+        }
+
+        function myFunction05() {
+            const h2 = document.getElementById("056");
+            let html = "<p>TOBI</p><p>ITACHI UCHIHA</p><p>NAGATO</p>";
+            h2.insertAdjacentHTML("afterend", html);
+        }
+
+        function myFunction06() {
+            document.getElementById("056").style.visibility = "hidden";
+        }
+
+        function myFunction07() {
+            document.getElementById("07").style.msTransform = "rotate(20deg)";
+            document.getElementById("07").style.transform = "rotate(20deg)";
+        }
+    </script>
+
+</body>
+
+</html>
